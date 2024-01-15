@@ -1,0 +1,167 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Avenir, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	width: 10000px;
+}
+
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1 { 
+	margin-top: 0;	 /
+	padding-right: 0;
+	padding-left: 15px; 
+	font-size: medium;
+	font-family: Verdana, Avenir, Helvetica, sans-serif;
+}
+
+h2 {
+	margin-top: 0;
+	padding-right: -15px;
+	padding-left: 15px;
+	font-size: medium;
+	font-family: "Avenir Medium", "Avenir Light", Trebuchet MS;
+	font-style: italic;
+	text-decoration: blink;
+	text-indent: 80px;
+}
+
+h3 {
+	margin-top: 0;	 
+	padding-left: 15px; 
+	font-size: 12px;
+	font-family: "Avenir Medium", "Avenir Light", Trebuchet MS;
+	font-style: italic;
+}
+	
+h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+	font-size:12px;
+	font-family: Verdana, Avenir, Helvetica, sans-serif;
+}
+
+a img { 
+	border: none;
+}
+
+a:link {
+	color:#414958;
+	text-decoration: underline; 
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	color:rgba(255,0,0,1);
+	text-decoration: none;
+}
+
+
+.container {
+	background-color: #FFF;
+	margin: 0 auto; 
+	overflow: hidden; 
+}
+
+.sidebar1 {
+	float: left;
+	width: 340px;
+	padding-bottom: 10px;
+	font-size:20%;
+}
+.content {
+	padding: 10px 0;
+	float: left;
+}
+
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; 
+}
+
+
+.com {
+	background-color: rgba(252,255,81,1);
+	clear: none;
+	margin-top: auto;
+	margin-right: 10px;
+	margin-bottom: auto;
+	/*margin-left: 20px;*/
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	text-align: center;
+	vertical-align: middle;
+	top: 10px;
+}
+
+#logo {
+	padding-top: 5%;
+	padding-right: 0%;
+	padding-bottom: 0%;
+	padding-left: 5%;
+	margin-top: 5px;
+}
+
+.tumblr {
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	top: 10px;
+	background-color: rgba(108,245,222,1);
+}
+
+.flickr {
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	text-align: center;
+	vertical-align: middle;
+	top: 10px;
+	background-color: rgba(251,207,227,1);
+}
+
+.productions{
+}
+
+.item{
+	width: 500px;
+	float: left;
+	margin-left: 100px;
+	padding-top: 10px;
+	padding-right: 150px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+}
+
+.name{
+	width: 165px;
+	float:left;
+	text-align:left;
+}
+
+.links{
+	float:left;
+	width: 175px;
+}
+
+	
