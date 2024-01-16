@@ -1,7 +1,6 @@
-# eyeeye.github.io
-This is a portfolio webpage documenting the curatorial work done by Eye Eye. 
-Eye Eye is an experimental curatorial collaboration by artists Flore Nové-Josserand and Thobjørn Andersen and as such, is not profit-driven.
-The webpage itself is created by FNJDesignLab as a way of learning how to code.
+# fnjdesignlab.github.io
+This is a portfolio webpage for FNJ Design Lab to showcase the work of designer Flore Nové-Josserand.
+It is built by Flore Nové-Josserand as a way to grow coding skills.
 
 LICENSE and Copyright.
 
