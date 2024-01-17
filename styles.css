@@ -1,4 +1,17 @@
-/* Variables */
+/* Table of Contents: 
+1. Variables
+2. CSS Reset
+3. Global Styles
+4. "Buttons"
+5. General Content Layout Classes
+6. NavBar
+7. About section
+8. Testimonials
+9. Services
+10. Gallery Cards */
+
+
+/* 1. Variables */
 :root {
 	--white: white;
 	--black: #000000;
@@ -26,7 +39,7 @@
 
 }
 
-/* CSS Reset */
+/* 2. CSS Reset */
 html {
 	box-sizing: border-box; 
 }
@@ -42,7 +55,7 @@ html {
 }
 
 
-/* Global styles */
+/* 3. Global styles */
 
 body {
 	font-family: "DM Sans", sans-serif;
@@ -89,7 +102,7 @@ ul {
 	list-style: none;
 }
 
-/* "Buttons" are in fact links styled as buttons*/
+/* 4. "Buttons" are in fact links styled as buttons*/
 a.btn {
 	font-family: 'DM Sans', sans-serif;
 	font-size: 1.5rem;
@@ -103,6 +116,7 @@ a.btn {
 	background-color: inherit;
 	border: 1px solid var(--black);
 	position: relative;
+	z-index:-1;
 }
 
 a.btn.with-icon {
@@ -133,7 +147,7 @@ a.btn.no-bubble:hover {
 }
 
 
-/* General Content Layout Classes */
+/* 5. General Content Layout Classes */
 
 .content-spacing-32 {
 	display: flex;
@@ -154,7 +168,7 @@ a.btn.no-bubble:hover {
 }
 
 .device-margin {
-	margin: 0 30px;
+	margin: 0 var(--desk-margin);
 }
 
 .body-large {
@@ -183,7 +197,7 @@ a.btn.no-bubble:hover {
 
 /* Content Sections */
 
-/* Navbar */
+/* 6. Navbar */
 
 nav {
 	background-color: var(--cream);
@@ -223,7 +237,7 @@ nav.scrolled {
 }
 
 
-/* About Section */
+/* 7. About Section */
 
 .about-section {
 	margin: 64px 0px 96px;
@@ -234,7 +248,7 @@ nav.scrolled {
 }
 
 
-/* Testimonials */
+/* 8. Testimonials */
 
 .testimonials {
 	margin: 60px 0px 96px;
@@ -272,9 +286,83 @@ nav.scrolled {
 }
 
 
-/* Services */
+/* 9. Services */
 
 .services-gallery {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 	"pt wt"
+							"pl wl"
+							"pb wb";
+	row-gap: 60px;
+	justify-items: center;
+	padding-bottom: 96px;
+}
+
+#ProductTitle {
+	grid-area: pt; /* 1 / 1 / 2 / 2;*/
+}
+
+#WebsiteTitle {
+	grid-area: wt; /* 1 / 2 / 2 / 3;*/
+}
+
+#ProductList {
+	grid-area: pl; /* 2 / 1 / 3 / 2; */
+}
+
+#ProductBtn {
+	grid-area: pb; /* 3 / 1 / 4 / 2; */
+}
+
+
+#WebsiteList {
+	grid-area: 
+}
+
+#WebsiteBtn {
+	grid-area: 
+}
+
+.design-service-card {
+	width: 50%;
+	align-items: center;
+	padding-bottom: 60px;
+}
+
+.services-gallery h3 {
+	display: block;
+	background-color: var(--black);
+	color: var(--cream);
+	width: 100%;
+	padding: 1.125rem;
+	font-family: 'Miller Text', serif;
+	font-size: 3.75rem;
+	font-style: italic;
+	text-align: center;
+}
+
+.services-gallery ul {
+	width: 66%;
+}
+
+.product, .product a.btn {
+	color: var(--primary);
+	border-color: var(--primary);
+}
+
+.product h3 {
+	background-color: var(--primary);
+}
+
+
+.product a.btn.no-bubble:hover {
+	background-color: var(--black);
+	color: var(--cream);
+}
+
+/*.services-gallery {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -314,11 +402,9 @@ nav.scrolled {
 .product a.btn.no-bubble:hover {
 	background-color: var(--black);
 	color: var(--cream);
-}
+}*/
 
-/* Product Design */
-
-
+/* 10. Gallery Cards */
 
 .project-gallery {
 	display: grid;
@@ -327,10 +413,54 @@ nav.scrolled {
 }
 
 .project-card .image-container {
-	/*border-radius: 30px;*/
-	background-color: red;
+	border-radius: 30px;
+	height: 30vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
 }
 
 .project-card img {
-	width: 100%;
+	width: 100%;	
 }
+
+.project-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; 
+	min-height: calc(3.5rem + 2vw); /* if breakpoint is around 1000 */
+
+}
+
+.project-title p {
+	font-style: italic;
+	text-transform: none;
+	min-height: 1.5rem;
+}
+
+.project-title h3 {
+	font-family: 'Miller Text', serif;
+	font-size: 1.6vw; /* 2rem; */
+	font-style: italic;
+	font-weight: inherit;
+}
+
+.project-title .tags {
+	display: grid;
+	grid-auto-flow: row dense;
+	justify-content: start;
+	gap: 1.25rem;
+}
+
+p.tag {
+	display: inline-block;
+	background-color: var(--secondary);
+	padding: 4px 12px;
+	border-radius: 20px;
+	color: var(--black);
+	text-transform: none;
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
+
+}
+
