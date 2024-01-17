@@ -8,7 +8,9 @@
 7. About section
 8. Testimonials
 9. Services
-10. Gallery Cards */
+10. Gallery Cards
+11. Product and Website Design sections
+12. Footer */
 
 
 /* 1. Variables */
@@ -363,47 +365,6 @@ nav.scrolled {
 	color: var(--cream);
 }
 
-/*.services-gallery {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.design-service-card {
-	width: 50%;
-	align-items: center;
-	padding-bottom: 60px;
-}
-
-.design-service-card h3 {
-	display: block;
-	background-color: var(--black);
-	color: var(--cream);
-	width: 100%;
-	padding: 1.125rem;
-	font-family: 'Miller Text', serif;
-	font-size: 3.75rem;
-	font-style: italic;
-	text-align: center;
-}
-
-.design-service-card ul {
-	width: 66%;
-}
-
-.product, .product a.btn {
-	color: var(--primary);
-	border-color: var(--primary);
-}
-
-.product h3 {
-	background-color: var(--primary);
-}
-
-
-.product a.btn.no-bubble:hover {
-	background-color: var(--black);
-	color: var(--cream);
-}*/
 
 /* 10. Gallery Cards */
 
@@ -441,7 +402,7 @@ nav.scrolled {
 
 .project-title h3 {
 	font-family: 'Miller Text', serif;
-	font-size: 1.6vw; /* 2rem; */
+	font-size: 1.6vw; /* or 2rem at 1920; */
 	font-style: italic;
 	font-weight: inherit;
 }
@@ -465,7 +426,7 @@ p.tag {
 
 }
 
-/* 10. Product and Website Design Section */
+/* 11. Product and Website Design Section */
 
 .product-services, .website-services {
 	margin-bottom: var(--desk-content-bottom-margin);
@@ -490,5 +451,71 @@ p.tag {
 }
 
 #Eolink .image-container {
-	background-img: url(/images/projects/Eolink_bckgd.png);
+	background-image: url(/images/projects/Eolink_bckgd.png);
+}
+
+/* 12. Footer */
+
+footer {
+	padding: 60px 0px;
+	background-color: var(--black);
+	color: var(--cream);
+	border-color: var(--cream);
+}
+
+footer .section-header {
+	border-bottom: 1px solid var(--cream);
+}
+
+footer a {
+	color: var(--cream);
+}
+
+footer .body-small {
+	color: var(--cream);
+	line-height: 1.2;
+}
+
+footer li a {
+	text-transform: none;
+}
+
+.socials-list {
+	display: flex;
+	gap: 60px;
+}
+
+.socials-list li {
+	min-width: 13.5rem;
+}
+
+.socials-circle {
+	background-color: var(--cream);
+	height: 48px;
+	width: 48px;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black);
+	font-size: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.socials-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+#DownloadBtn {
+	color: var(--cream);
+	border-color: var(--cream);
+}
+
+
+a[download] {
+	color: var(--cream);
+	border-color: var(--cream);
+
 }
