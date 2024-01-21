@@ -1,9 +1,11 @@
 /* Table of Contents: 
 1. Variables
 2. CSS Reset
-3. Global Styles
-4. "Buttons"
-5. General Content Layout Classes
+3. Text Styles
+4. Spacing and Section Layout Classes
+5. "Buttons"
+
+Sections -
 6. NavBar
 7. About section
 8. Testimonials
@@ -22,10 +24,23 @@
 	--primary: hwb(256 10% 9%);
 	--secondary: #FFFF00;
 	--cream: #FAF6EB;
-	/* Size */
-	--desk-margin: 30px;
+	/* Size and spacing */
+	--desk-margin-content: 10vw;
+	--desk-margin-nav: 30px;
 	--mob-margin: 16px;
+	--desk-max-width: 1200px;
 	--desk-content-bottom-margin: 120px;
+	--button-fixed-width: 18.75rem;
+	--button-full-width: 100%;
+	--spacing-16: 1rem;
+	--spacing-24: 1.5rem;
+	--spacing-32: 2rem;
+	--spacing-64: 4rem;
+	--spacing-96: 6rem;
+	--spacing-12: 0.75rem;
+	--spacing-14: 0.875rem;
+	--spacing-48: 3rem;
+
 
 	/* Conversions */
 	/* 	14px = 0.875
@@ -45,6 +60,8 @@
 /* 2. CSS Reset */
 html {
 	box-sizing: border-box; 
+	scroll-behavior: smooth;
+	scroll-padding: 5rem;
 }
 
 *, *::before, *::after {
@@ -58,16 +75,95 @@ html {
 }
 
 
-/* 3. Global styles */
+/* 3. Text styles */
 
 body {
 	font-family: "DM Sans", sans-serif;
 	font-weight: 300;
-	font-size: 1.125rem;
-	line-height: 1.2;
+	font-size: 1rem;
+	line-height: 1.5; /*1.2*/
 	color: var(--black);
 	background-color: var(--cream);
 	width: 100vw;
+}
+
+.body-large {
+	font-size: 1.5rem;
+	letter-spacing: -4%;
+}
+
+.body-small {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: var(--dark-grey);
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-weight: inherit;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-weight: 300;
+	font-style: italic;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: inherit;	
+	letter-spacing: -4%;
+}
+
+.services-gallery h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--black);
+	color: var(--cream);
+	width: 50vw;
+	min-height: 150px;
+	padding: 1.125rem;
+	font-family: 'Miller Text', serif;
+	font-size: 3.75rem; /* 3.75*/
+	line-height: 1.2;
+	font-style: italic;
+	text-align: center;
+}
+
+.project-title h3 {
+	font-family: 'Miller Text', serif;
+	font-size: 1.5vw; /* or 1.5rem at 1440; */
+	font-style: italic;
+	font-weight: inherit;
+}
+
+quote {
+	font-family: 'Miller Text', serif;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	font-weight: 500;
+}
+
+p {
+	text-align: justify;
+}
+
+p.tag {
+	display: inline-block;
+	background-color: var(--secondary);
+	padding: 4px 12px;
+	border-radius: 20px;
+	color: var(--black);
+	text-transform: none;
+	font-size: 0.875rem;
+	margin-bottom: 0.75rem;
+}
+
+ul {
+	list-style: none;
 }
 
 a {
@@ -76,43 +172,70 @@ a {
 	text-decoration: none;
 }
 
-h1 {
-	text-transform: uppercase;
-	font-size: 1.25rem;
-	font-weight: inherit;
+a:active {
+	color: var(--primary);
 }
 
-h2 {
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	font-weight: 300;
+nav li a {
+	display: block;
+	padding: 1rem 2rem;
 	font-style: italic;
+	font-size: 1.125rem;
+	text-decoration: underline;
 }
 
-h3 {
-	text-transform: uppercase;
-	font-size: inherit;
-	
+
+/* 4. Spacing and Section Layout Classes */
+
+.content-spacing-32 {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-32);
 }
 
-quote {
-	font-family: 'Miller Text', serif;
-	font-size: 2.75rem;
-	line-height: 1.2;
-	font-weight: 500;
+.content-spacing-60 {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-64);
 }
 
-ul {
-	list-style: none;
+.content-spacing-96 {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-96);
 }
+
+.device-margin {
+	width: 66%;
+	max-width: var(--desk-max-width);
+	margin: 0 auto;
+}
+
+.device-margin-nav {
+	padding: 0 var(--desk-margin-nav);
+}
+
+.section-header {
+	padding: 0 0 14px;
+	border-bottom: 1px solid var(--black);
+	font-weight: 200;
+	width: 66%;
+	max-width: var(--desk-max-width);
+	margin: 0 auto var(--spacing-24) auto;
+}
+
+.section-margin-box {
+	margin: var(--spacing-64) 0 var(--spacing-96);
+}
+
 
 /* 4. "Buttons" are in fact links styled as buttons*/
 a.btn {
 	font-family: 'DM Sans', sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	width: 300px;
-	padding: 12px 24px; 
+	width: 18.5rem;
+	padding: var(--spacing-12) var(--spacing-24); 
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -134,10 +257,10 @@ a.btn:hover {
 	transition: 500ms ease-in;
 	background-color: var(--primary);
 	color: var(--cream);
-	height: 300px;
+	height: 18.5rem;
 	border: none;
 	border-radius: 300px;
-	top: -122px;
+	top: -7.3125rem;
 	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.55);
 }
 
@@ -149,55 +272,16 @@ a.btn.no-bubble:hover {
 	box-shadow: none;
 }
 
-
-/* 5. General Content Layout Classes */
-
-.content-spacing-32 {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
+/* Socials animation */
+a.btn-inner:hover .socials-circle {
+	transition: 500ms ease-in;
+	background-color: var(--primary);
+	color: var(--cream);
+	transform: scale(2);
+	border: none;
+	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.55);
 }
 
-.content-spacing-60 {
-	display: flex;
-	flex-direction: column;
-	gap: 60px;
-}
-
-.content-spacing-96 {
-	display: flex;
-	flex-direction: column;
-	gap: 96px;
-}
-
-.device-margin {
-	margin: 0 var(--desk-margin);
-}
-
-
-.body-large {
-	font-size: 2rem;
-	letter-spacing: -4%;
-}
-
-.body-small {
-	font-size: 1.125rem;
-	line-height: 1.5;
-	color: var(--dark-grey);
-}
- 
-.body-xsmall {
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-.section-header {
-	padding: 0 0 14px;
-	border-bottom: 1px solid var(--black);
-	font-weight: 200;
-	margin: 0 30px 24px 30px;
-
-}
 
 /* Content Sections */
 
@@ -210,7 +294,7 @@ nav {
 	align-items: center;
 	width: 100%;
 	padding: 0 var(--desk-margin);
-	height: 64px;
+	height: var(--spacing-64);
 	position: fixed;
 	z-index: 2;
 	top: 0;
@@ -222,14 +306,6 @@ nav ul {
   display: flex;
 }
 
-nav li a {
-	display: block;
-	padding: 1rem 2rem;
-	font-style: italic;
-	font-size: 1.25rem;
-	text-decoration: underline;
-}
-
 nav a:hover {
 	color: var(--primary);
 	transform: scale(1.25);
@@ -239,14 +315,10 @@ nav a:hover {
    
 nav.scrolled {
 	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.12);
-}
+} /* adds a drop shadow when scrolled. see script in html */
 
 
 /* 7. About Section */
-
-.about-section {
-	margin: 64px 0px var(--desk-content-bottom-margin);
-}
 
 .about-section img {
 	width: 100%;
@@ -255,30 +327,30 @@ nav.scrolled {
 
 /* 8. Testimonials */
 
-.testimonials {
-	margin: 60px 0px var(--desk-content-bottom-margin);
-}
-
 .testimonial-card {
-	margin-top: 72px;
+	margin-top: 5rem;
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
-	width: 66%;
+	gap: var(--spacing-32);
 }
 
 .testimonial-card:first-of-type {
-	margin-top: 36px;
+	margin-top: var(--spacing-32);
+}
+
+.testimonial-card  quote {
+	width: 80%;
 }
 
 .testimonial-card > p {
-	width: 75%;
+	width: 60%;
+	color: var(--dark-grey);
 }
 
 .referee-container {
 	display: flex;
 	align-items: center;
-	gap: 32px;
+	gap: var(--spacing-32);
 }
 
 .referee-container img {
@@ -286,8 +358,8 @@ nav.scrolled {
 	aspect-ratio: 1/1;
 }
 
-.referee-name {
- color: var(--dark-grey)
+.referee-job {
+ color: var(--black);
 }
 
 
@@ -300,7 +372,7 @@ nav.scrolled {
 	grid-template-areas: 	"pt wt"
 							"pl wl"
 							"pb wb";
-	row-gap: 60px;
+	row-gap: var(--spacing-48);
 	justify-items: start;
 	padding-bottom: var(--desk-content-bottom-margin);
 }
@@ -330,24 +402,12 @@ nav.scrolled {
 }
 
 
-.services-gallery h3 {
-	display: block;
-	background-color: var(--black);
-	color: var(--cream);
-	width: 50vw;
-	padding: 1.125rem;
-	font-family: 'Miller Text', serif;
-	font-size: 3.75rem;
-	font-style: italic;
-	text-align: center;
-}
-
 .services-gallery ul {
-	padding: 0 11vw;
+	padding: 0 25%;
 }
 
 .services-gallery .btn {
-	margin-left: 11vw;
+	margin-left: 25%;
 }
 
 #ProductList, #ProductBtn {
@@ -369,14 +429,34 @@ nav.scrolled {
 /* 10. Gallery Cards */
 
 .project-gallery {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 32px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-32);
+}
+
+.project-gallery li {
+	flex-basis: 280px;
+	flex-grow: 1;
+	margin-bottom: var(--spacing-32);
+}
+
+.project-gallery::after {
+	content: "";
+	flex-basis: 280px;
+	height: 4px;
+  }
+
+.project-card {
+	position: relative;
 }
 
 .project-card .image-container {
+	margin-top: calc(4rem + 1.5vw);
 	border-radius: 30px;
-	height: 30vh;
+	height: 33vh;
+	max-height: 280px;
+	max-width: 4800px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -389,47 +469,33 @@ nav.scrolled {
 .project-title {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end; 
-	min-height: calc(3.5rem + 2vw); /* if breakpoint is around 1000 */
+	justify-content: flex-start; 
+	position: absolute;
+	width: 100%;
+	/* min-height: calc(3.75rem + 2vw);  if breakpoint is around 1000 */
 
 }
 
 .project-title p {
 	font-style: italic;
 	text-transform: none;
-	min-height: 1.5rem;
+	text-align: left;
 }
 
-.project-title h3 {
-	font-family: 'Miller Text', serif;
-	font-size: 1.6vw; /* or 2rem at 1920; */
-	font-style: italic;
-	font-weight: inherit;
-}
-
-.project-title .tags {
+.project-title .tags-container {
 	display: grid;
+	max-width: 280px;
 	grid-auto-flow: row dense;
 	justify-content: start;
 	gap: 1.25rem;
-}
-
-p.tag {
-	display: inline-block;
-	background-color: var(--secondary);
-	padding: 4px 12px;
-	border-radius: 20px;
-	color: var(--black);
-	text-transform: none;
-	font-size: 1rem;
-	margin-bottom: 0.75rem;
 
 }
+
 
 /* 11. Product and Website Design Section */
 
 .product-services, .website-services {
-	margin-bottom: var(--desk-content-bottom-margin);
+	margin-bottom: var(--spacing-64);
 }
 
 .website-services .project-card .image-container {
@@ -457,7 +523,7 @@ p.tag {
 /* 12. Footer */
 
 footer {
-	padding: 60px 0px;
+	padding: var(--spacing-64) 0;
 	background-color: var(--black);
 	color: var(--cream);
 	border-color: var(--cream);
@@ -465,6 +531,18 @@ footer {
 
 footer .section-header {
 	border-bottom: 1px solid var(--cream);
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	min-width: 100%;
+}
+
+footer .section-header h2 {
+	margin-left: 30px;
+}
+
+.footer-content {
+padding: 0 30px;
 }
 
 footer a {
@@ -500,7 +578,9 @@ footer li a {
 	color: var(--black);
 	font-size: 1.5rem;
 	margin-bottom: 0.75rem;
+	position: relative;
 }
+
 
 .socials-container {
 	display: flex;
@@ -511,11 +591,11 @@ footer li a {
 #DownloadBtn {
 	color: var(--cream);
 	border-color: var(--cream);
+	position: relative;
 }
 
 
 a[download] {
 	color: var(--cream);
 	border-color: var(--cream);
-
 }
