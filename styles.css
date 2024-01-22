@@ -676,6 +676,10 @@ nav.scrolled .mobile-menu .header {
 		text-align: left;
 	}
 
+	.body-large {
+		line-height: 1.2;
+	}
+
 	/* 13.3 Spacing */
 	.device-margin {
 		width: inherit;
