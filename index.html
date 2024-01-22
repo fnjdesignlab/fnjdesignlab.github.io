@@ -19,305 +19,339 @@
 </head>
 
 <body>
-  <nav id="navBar" class="navBar device-margin-nav">
-    <div class="logo">
-      <h1>FNJ Design Lab</h1>
+  <aside id="mobileMenu" class="mobile-menu">
+    <div class="header">
+      <div class="logo">
+        <h1>FNJ Design Lab</h1>
+      </div>
+      <a href="javascript:void(0)" onclick="closeNav()">
+        <i class="fa-solid fa-x"></i>
+      </a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#about-section">About</a></li>
-      <li><a href="#services-section">Services</a></li>
-      <li><a href="#contact-section">Contact</a></li>
+ 
+    <ul class="mob-nav-links">
+      <li><a href="#about-section" onclick="closeNav()">About</a></li>
+      <li><a  href="#services-section" onclick="closeNav()">Services</a></li>
+      <li><a  href="#contact-section" onclick="closeNav()">Contact</a></li>
     </ul>
-  </nav>
-  <article class="main-content">
-    <section id="about-section" class="about-section content-spacing-60 section-margin-box">
-        <img src="/images/FNJ_hero_image_desktop.svg" alt="playful design image of designer Flore Nové-Josserand" loading="lazy">
-        <div class="device-margin content-spacing-60">
-          <p class="body-large">I’m a creative and thorough digital designer who enjoys working across product and website design. Whether you need a new flow, a new button, a new page or a new idea, I am happy to deliver :)
-          <br>
-          <br>
-          I have worked for clients from a variety of industries, both as a freelancer and as part of a large digital agency. Previously, I trained as a scientist and I spent many years as a professional artist. I am used to navigating different worlds, and I am used to finding the right solution for the right context, within existing limitations and complexities.</p>
-          <a href="#contact-section" class="btn">
-            Get in touch
+  </aside>
+  <article class="page">
+    <nav id="navBar" class="navBar device-margin-nav">
+      <div class="logo">
+        <h1>FNJ Design Lab</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a class="desktop-only" href="#about-section">About</a></li>
+        <li><a class="desktop-only" href="#services-section">Services</a></li>
+        <li><a class="desktop-only" href="#contact-section">Contact</a></li>
+        <li><a href="javascript:void(0)" onclick="openNav()" class="mobile-only"><i class="fa-solid fa-bars"></i></a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <section id="about-section" class="about-section content-spacing-60 section-margin-box">
+          <img class="desktop-only" src="/images/FNJ_Hero_image-desktop.svg" alt="playful design image of designer Flore Nové-Josserand" loading="lazy">
+          <img class="mobile-only" src="/images/FNJ_Hero_image_mobile.svg" alt="playful design image of designer Flore Nové-Josserand" loading="lazy">
+          <div class="device-margin content-spacing-60">
+            <p class="body-large">I’m a creative and thorough digital designer who enjoys working across product and website design. Whether you need a new flow, a new button, a new page or a new idea, I am happy to deliver :)
+            <br>
+            <br>
+            I have worked for clients from a variety of industries, both as a freelancer and as part of a large digital agency. Previously, I trained as a scientist and I spent many years as a professional artist. I am used to navigating different worlds, and I am used to finding the right solution for the right context, within existing limitations and complexities.</p>
+            <a href="#contact-section" class="btn">
+              Get in touch
+            </a>
+          </div>
+      </section>
+      <section id="testimonials" class="testimonials section-margin-box">
+        <header class="section-header">
+          <h2>Kind Words from Collaborators</h2>
+        </header>
+        <div class="testimonial-card device-margin mobile-only">
+          <quote>“genuinely interested in understanding human value drivers”</quote>
+          <p class="body">
+            I had the joy of working together with Flore on a couple of projects at AKQA. She is genuinely interested in understanding human value drivers and examining problems from multiple lenses, which is a fantastic trait to posses. Flore is the type of person you can always count on voicing her recommendation and challenging the process to make sure you end up with the best outcome possible. On top of that, she is a fantastic person!
+          </p>
+          <div class="referee-container">
+            <img src="/images/testimonials/daniel_jordan.png" alt="Daniel Jordan" loading="lazy">
+            <div class="referee-details-container body-small">
+              <p class="referee-name">Daniel Torp Wulff Jordan</p>
+              <p class="referee-job">Associate strategy director at AKQA</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider device-margin mobile-only"></div>
+        <div class="testimonial-card device-margin">
+          <quote>“I was impressed with her curiosity and critical thinking”</quote>
+          <p class="body">
+            I have worked with Flore during her internship at GLOBHE. I was impressed with her curiosity, research skills, critical thinking, attitude to learning more, and overall UX skills. She was always asking relevant questions that made us rethink our design approach and as a result, we were able to better focus and improve our new UX designs. It was indeed very pleasant to work together with Flore.</p>
+          <div class="referee-container">
+            <img src="/images/testimonials/remi_ghalayini.png" alt="Remi Ghalayini" loading="lazy">
+            <div class="referee-details-container body-small">
+              <p class="referee-name">Rémy Ghalayini</p>
+              <p class="referee-job">CTO at GLOBHE</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider device-margin mobile-only"></div>
+        <div class="testimonial-card device-margin">
+          <quote>“one of the rarest breed of creative UX”</quote>
+          <p class="body">
+            I’ve met my fair share of decent UXers in my career, but Flore is one of the rarest breed of creative UX bringing a mixture of rigour and methodology, twinned with a creative mindset. She not only speaks the language of both disciplines but she’s a bridge between potential silos as well as great team player.</p>
+          <div class="referee-container">
+            <img src="/images/testimonials/jean_robert_saintil.png" alt="Jean-Robert Saintil" loading="lazy">
+            <div class="referee-details-container body-small">
+              <p class="referee-name">Jean-Robert Saintil</p>
+              <p class="referee-job">Senior copywriter and creative strategist at AKQA</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider device-margin"></div>
+        <div class="testimonial-card device-margin">
+          <quote>“logical and free spirit”</quote>
+          <p class="body">
+            Absolutely the best of both opposite worlds: logical and free spirit. You absolutely rock.</p>
+          <div class="referee-container">
+            <img src="/images/testimonials/berglind_ingibertsdottir.png" alt="Berglind Ingibertsdottir" loading="lazy">
+            <div class="referee-details-container body-small">
+              <p class="referee-name">Berglind Ingibertsdottir</p>
+              <p class="referee-job">Senior product designer at Sidekick Health</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services-section" class="services-section">
+        <header class="section-header">
+          <h2>Services</h2>
+        </header>
+        <div class="services-gallery">
+          <h3 id="ProductTitle">Product Design</h3>
+          <ul id="ProductList">
+            <li>Designing screens</li>
+            <li>Designing UI components</li>
+            <li>Design systems and style guide</li>
+            <li>User flows and user-centered deliverables</li>
+            <li>User research</li>
+            <li>Prototyping</li>
+          </ul>
+          <a id="ProductBtn" href="#product-services" class="btn with-icon no-bubble">
+            Show Me <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <h3 id="WebsiteTitle">Website Design</h3>
+          <ul>
+            <li>Designing webpages</li>
+            <li>Branding</li>
+            <li>Collecting and preparing content</li>
+            <li>Illustrations</li>
+            <li>Copy</li>
+            <li>Web development</li>
+          </ul>
+          <a href="#website-services" class="btn with-icon no-bubble">
+            Show Me <i class="fa-solid fa-chevron-down"></i>
           </a>
         </div>
-    </section>
-    <section id="testimonials" class="testimonials section-margin-box">
-      <header class="section-header">
-        <h2>Kind Words from Collaborators</h2>
-      </header>
-      <div class="testimonial-card device-margin">
-        <quote>“genuinely interested in understanding human value drivers”</quote>
-        <p class="body">
-          I had the joy of working together with Flore on a couple of projects at AKQA. She is genuinely interested in understanding human value drivers and examining problems from multiple lenses, which is a fantastic trait to posses. Flore is the type of person you can always count on voicing her recommendation and challenging the process to make sure you end up with the best outcome possible. On top of that, she is a fantastic person!
-        </p>
-        <div class="referee-container">
-          <img src="/images/testimonials/daniel_jordan.png" alt="Daniel Jordan" loading="lazy">
-          <div class="referee-details-container body-small">
-            <p class="referee-name">Daniel Torp Wulff Jordan</p>
-            <p class="referee-job">Associate strategy director at AKQA</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card device-margin">
-        <quote>“I was impressed with her curiosity and critical thinking”</quote>
-        <p class="body">
-          I have worked with Flore during her internship at GLOBHE. I was impressed with her curiosity, research skills, critical thinking, attitude to learning more, and overall UX skills. She was always asking relevant questions that made us rethink our design approach and as a result, we were able to better focus and improve our new UX designs. It was indeed very pleasant to work together with Flore.</p>
-        <div class="referee-container">
-          <img src="/images/testimonials/remi_ghalayini.png" alt="Remi Ghalayini" loading="lazy">
-          <div class="referee-details-container body-small">
-            <p class="referee-name">Rémy Ghalayini</p>
-            <p class="referee-job">CTO at GLOBHE</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card device-margin">
-        <quote>“one of the rarest breed of creative UX”</quote>
-        <p class="body">
-          I’ve met my fair share of decent UXers in my career, but Flore is one of the rarest breed of creative UX bringing a mixture of rigour and methodology, twinned with a creative mindset. She not only speaks the language of both disciplines but she’s a bridge between potential silos as well as great team player.</p>
-        <div class="referee-container">
-          <img src="/images/testimonials/jean_robert_saintil.png" alt="Jean-Robert Saintil" loading="lazy">
-          <div class="referee-details-container body-small">
-            <p class="referee-name">Jean-Robert Saintil</p>
-            <p class="referee-job">Senior copywriter and creative strategist at AKQA</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card device-margin">
-        <quote>“logical and free spirit”</quote>
-        <p class="body">
-          Absolutely the best of both opposite worlds: logical and free spirit. You absolutely rock.</p>
-        <div class="referee-container">
-          <img src="/images/testimonials/berglind_ingibertsdottir.png" alt="Berglind Ingibertsdottir" loading="lazy">
-          <div class="referee-details-container body-small">
-            <p class="referee-name">Berglind Ingibertsdottir</p>
-            <p class="referee-job">Senior product designer at Sidekick Health</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="services-section" class="services-section">
-      <header class="section-header">
-        <h2>Services</h2>
-      </header>
-      <div class="services-gallery">
-        <h3 id="ProductTitle">Product Design</h3>
-        <ul id="ProductList">
-          <li>Designing screens</li>
-          <li>Designing UI components</li>
-          <li>Design systems and style guide</li>
-          <li>User flows and user-centered deliverables</li>
-          <li>User research</li>
-          <li>Prototyping</li>
-        </ul>
-        <a id="ProductBtn" href="#product-services" class="btn with-icon no-bubble">
-          Show Me <i class="fa-solid fa-chevron-down"></i>
-        </a>
-        <h3 id="WebsiteTitle">Website Design</h3>
-        <ul>
-          <li>Designing webpages</li>
-          <li>Branding</li>
-          <li>Collecting and preparing content</li>
-          <li>Illustrations</li>
-          <li>Copy</li>
-          <li>Web development</li>
-        </ul>
-        <a href="#website-services" class="btn with-icon no-bubble">
-          Show Me <i class="fa-solid fa-chevron-down"></i>
-        </a>
-      </div>
-    </section>
-    <section id="product-services" class="product-services">
-      <header class="section-header">
-        <h2>Product Design</h2>
-      </header>
-      <div class="device-margin content-spacing-60">
-        <p class="body-large">
-          While I believe a successful design has to match the context, the business and the team, my role is to champion the user perspective. This means finding ways to investigate user behaviour and expectations and reflect it in the design.
-          <br>
-          <br>
-          I deliver across the UX/UI design process, from research to concepting to visual design & writing at final resolution. I always start with understanding the context of the ask, before delivering a design at the required level of resolution. I design with user insights and iteration in mind. The case studies below will provide more detail into my process.
-        </p>
-        <ul class="project-gallery">
-          <li id="SMK">
-            <a href="https://drive.google.com/file/d/1EZUoRgsBsG_4bnnsx3V3ggyTBUbQJ3xy/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">Investigating and improving user engagement.</p>
-                  <h3>SMK Online collections</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/SMK.png" alt="mockup and wireframe of SMK Open" loading="lazy">
-                </div>
-                <div class="tags">
-                  <p class="tag">Field research</p>
-                  <p class="tag">Surveys</p>
-                  <p class="tag">Interviews</p>
-                  <p class="tag">Usability tests</p>
-                  <p class="tag">Concepting</p>
-                  <p class="tag">User flows</p>
-                  <p class="tag">Wireframes</p>
-                  <p class="tag">Mockups</p>
-                  <p class="tag">Co-creation workshop</p>
-                </div>
-            </a>
-          </li>
-          <li id="MindMind">
-            <a href="https://drive.google.com/file/d/10a6jBGcnJ6CaoX_glgbhemgor15G_oXg/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">Concepting and prototyping a new service.</p>
-                  <h3>Calming app for kids</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/MindMind.png" alt="screen mockups of calming app" loading="lazy">
-                </div>
-                <div class="tags">
-                  <p class="tag">Journey mapping</p>
-                  <p class="tag">User flows</p>
-                  <p class="tag">Concepting</p>
-                  <p class="tag">Wireframes</p>
-                  <p class="tag">Mockups</p>
-                  <p class="tag">UI</p>
-                  <p class="tag">Prototyping</p>
-                  <p class="tag">Experimentation guidelines</p>
-                </div>
-            </a>
-          </li>
-          <li id="Bookworm">
-            <a href="https://drive.google.com/file/d/1Ms1XLk0VboVgMbyk20PcnEAUvnyXXEmf/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">UI for a language learning app.</p>
-                  <h3>Bookworm MVP redesign</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/Bookworm.png" alt="wireframes for Bookworm app" loading="lazy">
-                </div>
-                <div class="tags">
-                  <p class="tag">Wireframes</p>
-                  <p class="tag">User flows</p>
-                  <p class="tag">UI</p>
-                  <p class="tag">Style guide</p>
-                  <p class="tag">Component library</p>
-                  <p class="tag">Prototyping</p>
-                  <p class="tag">Design system</p>
-                </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="website-services" class="website-services">
-      <header class="section-header">
-        <h2>Website Design</h2>
-      </header>
-      <div class="device-margin content-spacing-60">
-        <p class="body-large">
-          Whether there is a brand identity or not, my goal as a website designer is to create an online presence that is reflective of your values and mission, while providing the key information that your audience expects.
-          <br>
-          <br>
-          I start my process with learning about your mission, culture, challenges, context and expectations. From there, I produce designs, visual assets and specs for the responsive site, which can then be delivered to your developers. For simple sites, I can handle the development myself.
-        </p>
-        <ul class="project-gallery">
-          <li id="TBA">
-            <a href="https://www.thorbjornandersen.com/" target="_blank" class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">Portfolio website for a visual artist.</p>
-                  <h3>Thorbjørn s. andersen</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/TAndersen.png" alt="webpage from Thorbjon S. Andersen's website" loading="lazy">
-                </div>
-                <div class="tags">
-                  <p class="tag">Web design</p>
-                  <p class="tag">Web development</p>
-                  <p class="tag">Webflow</p>
-                  <p class="tag">Content update guidelines</p>
-                  <p class="tag">Custom CMS template</p>
-                </div>
-            </a>
-          </li>
-          <li id="Torreloft">
-            <a href="https://torreloft.com/" target="_blank" class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">Website redesign for a non-profit art space in Copenhagen.</p>
-                  <h3>Tørreloft</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/Torreloft.png" alt="webpage from the Torreloft website" loading="lazy">
-                </div>
-                <div class="tags-container">
-                  <p class="tag">Web design</p>
-                  <p class="tag">Web development</p>
-                  <p class="tag">Cargo Collective</p>
-                  <p class="tag">Video</p>
-                  <p class="tag">Preparing visuals</p>
-                  <p class="tag">Content update guidelines</p>
-
-                </div>
-            </a>
-          </li>
-          <li id="Eolink">
-            <div class="project-card content-spacing-32">
-                <div class="project-title">
-                  <p class="body-small">Business website for a wind energy innovator.</p>
-                  <h3>Eolink</h3>
-                </div>
-                <div class="image-container">
-                  <img src="/images/projects/Eolink.png" alt="design mockup for the Eolink website" loading="lazy">
-                </div>
-                <div class="tags">
-                  <p class="tag">Web design</p>
-                  <p class="tag">Style guide</p>
-                  <p class="tag">Design handoff</p>
-                  <p class="tag">Vector illustrations</p>
-                </div>
-              </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <footer id="contact-section" class="contact-section">
-      <header class="section-header">
-        <h2>Contact</h2>
-      </header>
-      <div class="footer-content content-spacing-60">
-        <p class="body-small">
-          Flore Nové-Josserand
-          <br>
-          Copenhagen, DK.
-        </p>
-        <div class="socials-container">
-          <ul class="body-small socials-list">
-            <li>
-              <a class="btn-inner socials" href="mailto:fnjdesignlab@gmail.com">
-                <div class="socials-circle">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                fnjdesignlab@gmail.com</a>
-              </li>
-            <li><a class="btn-inner socials" href="tel:+454265346">
-              <div class="socials-circle">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              +45 42 65 33 46</a>
+      </section>
+      <section id="product-services" class="product-services">
+        <header class="section-header">
+          <h2>Product Design</h2>
+        </header>
+        <div class="device-margin content-spacing-60">
+          <p class="body-large">
+            While I believe a successful design has to match the context, the business and the team, my role is to champion the user perspective. This means finding ways to investigate user behaviour and expectations and reflect it in the design.
+            <br>
+            <br>
+            I deliver across the UX/UI design process, from research to concepting to visual design & writing at final resolution. I always start with understanding the context of the ask, before delivering a design at the required level of resolution. I design with user insights and iteration in mind.
+          </p>
+          <ul class="project-gallery">
+            <li id="SMK">
+              <a href="https://drive.google.com/file/d/1EZUoRgsBsG_4bnnsx3V3ggyTBUbQJ3xy/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">Investigating and improving user engagement.</p>
+                    <h3>SMK Online collections</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/SMK.png" alt="mockup and wireframe of SMK Open" loading="lazy">
+                  </div>
+                  <div class="tags">
+                    <p class="tag">Field research</p>
+                    <p class="tag">Surveys</p>
+                    <p class="tag">Interviews</p>
+                    <p class="tag">Usability tests</p>
+                    <p class="tag">Concepting</p>
+                    <p class="tag">User flows</p>
+                    <p class="tag">Wireframes</p>
+                    <p class="tag">Mockups</p>
+                    <p class="tag">Co-creation workshop</p>
+                  </div>
+              </a>
+              <div class="divider device-margin mobile-only"></div>
             </li>
-            <li><a class="btn-inner socials" href="https://www.linkedin.com/in/flore-nov%C3%A9-josserand-7a552b15a/
-              ">
-              <div class="socials-circle">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-              flore-nové-josserand</a>
+            <li id="MindMind">
+              <a href="https://drive.google.com/file/d/10a6jBGcnJ6CaoX_glgbhemgor15G_oXg/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">Concepting and prototyping a new service.</p>
+                    <h3>Calming app for kids</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/MindMind.png" alt="screen mockups of calming app" loading="lazy">
+                  </div>
+                  <div class="tags">
+                    <p class="tag">Journey mapping</p>
+                    <p class="tag">User flows</p>
+                    <p class="tag">Concepting</p>
+                    <p class="tag">Wireframes</p>
+                    <p class="tag">Mockups</p>
+                    <p class="tag">UI</p>
+                    <p class="tag">Prototyping</p>
+                    <p class="tag">Experimentation guidelines</p>
+                  </div>
+                  <div class="divider device-margin mobile-only"></div>
+              </a>
+            </li>
+            <li id="Bookworm">
+              <a href="https://drive.google.com/file/d/1Ms1XLk0VboVgMbyk20PcnEAUvnyXXEmf/view?usp=sharing" target="_blank" class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">UI for a language learning app.</p>
+                    <h3>Bookworm MVP redesign</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/Bookworm.png" alt="wireframes for Bookworm app" loading="lazy">
+                  </div>
+                  <div class="tags">
+                    <p class="tag">Wireframes</p>
+                    <p class="tag">User flows</p>
+                    <p class="tag">UI</p>
+                    <p class="tag">Style guide</p>
+                    <p class="tag">Component library</p>
+                    <p class="tag">Prototyping</p>
+                    <p class="tag">Design system</p>
+                  </div>
+                  <div class="divider device-margin mobile-only"></div>
+              </a>
+              
             </li>
           </ul>
-          <a download class="btn with-icon" href="/files/FloreNove_Design_CV.pdf" >
-            <i class="fa-solid fa-file-arrow-down"></i> Download CV
-          </a>
         </div>
-      </div>
-    </footer>
+      </section>
+      <section id="website-services" class="website-services">
+        <header class="section-header">
+          <h2>Website Design</h2>
+        </header>
+        <div class="device-margin content-spacing-60">
+          <p class="body-large">
+            Whether there is a brand identity or not, my goal as a website designer is to create an online presence that is reflective of your values and mission, while providing the key information that your audience expects.
+            <br>
+            <br>
+            I start my process with learning about your mission, culture, challenges, context and expectations. From there, I produce designs, visual assets and specs for the responsive site, which can then be delivered to your developers. For simple sites, I can handle the development myself.
+          </p>
+          <ul class="project-gallery">
+            <li id="TBA">
+              <a href="https://www.thorbjornandersen.com/" target="_blank" class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">Portfolio website for a visual artist.</p>
+                    <h3>Thorbjørn s. andersen</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/TAndersen.png" alt="webpage from Thorbjon S. Andersen's website" loading="lazy">
+                  </div>
+                  <div class="tags">
+                    <p class="tag">Web design</p>
+                    <p class="tag">Web development</p>
+                    <p class="tag">Webflow</p>
+                    <p class="tag">Content update guidelines</p>
+                    <p class="tag">Custom CMS template</p>
+                  </div>
+              </a>
+              <div class="divider device-margin mobile-only"></div>
+            </li>
+            <li id="Torreloft">
+              <a href="https://torreloft.com/" target="_blank" class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">Website redesign for a non-profit art space in Copenhagen.</p>
+                    <h3>Tørreloft</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/Torreloft.png" alt="webpage from the Torreloft website" loading="lazy">
+                  </div>
+                  <div class="tags-container">
+                    <p class="tag">Web design</p>
+                    <p class="tag">Web development</p>
+                    <p class="tag">Cargo Collective</p>
+                    <p class="tag">Video</p>
+                    <p class="tag">Preparing visuals</p>
+                    <p class="tag">Content update guidelines</p>
+                  </div>
+                  <div class="divider device-margin mobile-only"></div>
+              </a>
+            </li>
+            <li id="Eolink">
+              <div class="project-card content-spacing-32">
+                  <div class="project-title">
+                    <p class="body-small">Business website for a wind energy innovator.</p>
+                    <h3>Eolink</h3>
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/projects/Eolink.png" alt="design mockup for the Eolink website" loading="lazy">
+                  </div>
+                  <div class="tags">
+                    <p class="tag">Web design</p>
+                    <p class="tag">Style guide</p>
+                    <p class="tag">Design handoff</p>
+                    <p class="tag">Vector illustrations</p>
+                  </div>
+                </div>
+                <div class="divider device-margin mobile-only"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer id="contact-section" class="contact-section">
+        <header class="section-header">
+          <h2>Contact</h2>
+        </header>
+        <div class="footer-content content-spacing-60">
+          <p class="body-small">
+            Flore Nové-Josserand
+            <br>
+            Copenhagen, DK.
+          </p>
+          <div class="socials-container">
+            <ul class="body-small socials-list">
+              <li>
+                <a class="btn-inner socials" href="mailto:fnjdesignlab@gmail.com">
+                  <div class="socials-circle">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  fnjdesignlab@gmail.com</a>
+                </li>
+              <li><a class="btn-inner socials" href="tel:+454265346">
+                <div class="socials-circle">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                +45 42 65 33 46</a>
+              </li>
+              <li><a class="btn-inner socials" href="https://www.linkedin.com/in/flore-nov%C3%A9-josserand-7a552b15a/
+                ">
+                <div class="socials-circle">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                flore-nové-josserand</a>
+              </li>
+            </ul>
+            <a download class="btn with-icon" href="/files/FloreNove_Design_CV.pdf" >
+              <i class="fa-solid fa-file-arrow-down"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </article>
 
-<!--  NavBar Box shadow on scroll -->
+
+<!--  Scripts -->
+
   <script>
+  
+    //NavBar Box shadow on scroll
+
     var navBar = document.getElementById("navBar");
     window.onscroll = function() {
       if (window.scrollY > 22) {
@@ -326,7 +360,23 @@
         navBar.classList.remove("scrolled");
       }
     };
+    
+    //Mobile menu open
+
+    function openNav() {
+      document.getElementById("mobileMenu");
+      mobileMenu.classList.add("open");
+      document.getElementById("navBar").style.display = 'none';
+    }
+
+      //Mobile menu close
+
+    function closeNav() {
+      var image = document.getElementById("mobileMenu");
+      mobileMenu.classList.remove("open");
+      document.getElementById("navBar").style.display = 'flex';
+    }
+
   </script>
 </body>
-
 </html>
